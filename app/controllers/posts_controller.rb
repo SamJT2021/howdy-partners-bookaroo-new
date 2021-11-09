@@ -17,6 +17,12 @@ class PostsController < ApplicationController
     redirect_to newsfeed_url
   end
 
+  def add_like
+    post = Post.find(params[:post_id])
+    post.update_attribute(:number_of_likes, post.number_of_likes + 1)
+    redirect_to newsfeed_url
+  end
+
   private
 
   def post_params
