@@ -24,7 +24,6 @@ def sign_up_test_user
   fill_in "user_username", with: @test_user
   fill_in "user_password", with: @test_password
   fill_in "user_profile_picture", with: @test_profile_picture
-  # TO CHECK: why do we write user_username at line 24, but just username at line 35
   click_button "Sign up"
 end
 
