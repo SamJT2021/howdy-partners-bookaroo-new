@@ -13,9 +13,11 @@
  *= require_tree .
  *= require_self
  */
+html {
+  height: 100%;
+}
 
 body {
-  padding: 20px;
   height: 100%;
   margin: auto;
 }
@@ -27,7 +29,7 @@ body {
   background-color: red;
   padding: 2px;
   border: 2px solid black;
-  border-radius: 5px; 
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -45,14 +47,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-/* .credentials-container {
-  text-align: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
 
 .button {
   background-color: #cbeff5; /* Blue */
@@ -137,9 +131,9 @@ body {
 .header {
   background-color: goldenrod;
   border-bottom: 5px solid indianred;
-  margin: -10px;
-  margin-bottom: 10px;
   padding: 10px 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .navigation-bar {
@@ -153,7 +147,7 @@ body {
 
 .page-title {
   margin: 0;
-  padding-top: 20px;
+  padding: 10px;
   text-align: center;
 }
 
