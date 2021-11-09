@@ -10,34 +10,55 @@
 </div>
 
 <div class="posts">
-<% @posts.each_with_index do |post, index| %>
-  <div class="post" id=<%=index%>>
-    <h3><img class="profile-picture-on-newsfeed" src=<%= post.user.profile_picture %> />
-    <%= post.user.username %></h3>
-    <p><%= post.message %></p>
-    <p class="post-datetime"><%= post.created_at.strftime("%H:%M - %d %b %Y") %></p>
-    <div>
-    <% post.comments.each do |comment| %>
-      <div class="comment-container">
-        <div class="comment-user">
-          <h4><%= comment.user.username %></h4>
-        </div>
-        <div class="comment-message">
-          <p><%= comment.message %></p>
-          <p class="post-datetime"><%= comment.created_at.strftime("%H:%M - %d %b %Y") %></p>
-        </div>
-      </div>
-    <% end %>
-      <div class="new-comment-form">
-        <%= form_tag '/add-comment' do %>
-          <div class="form-section">
-            <%= text_area_tag :comment, params[:comment], id: "comment-post-id-#{post.id}", class: "new-comment-box"%>
+  <% @posts.each_with_index do |post, index| %>
+    <div class="post" id=<%=index%>>
+      <div class="post-container">
+
+        <h3><img class="profile-picture-on-newsfeed" src=<%= post.user.profile_picture %> />
+        <%= post.user.username %></h3>
+        <p><%= post.message %></p>
+        
+        <div class="post-information">
+          <div class="post-likes">
+            <div class="new-like-form">
+              <%= form_tag '/add-like' do %>
+                <%= hidden_field_tag :post_id, post.id %>
+                <%= submit_tag "Like", id: "like-button-id-#{post.id}", class: "new-like-button"%>
+              <% end %>
+            </div>
+            <p id="like-count-id-<%= post.id %>" >Likes: <%= post.number_of_likes %></p>
           </div>
-          <%= hidden_field_tag :post_id, post.id %>
-          <%= submit_tag "Add comment", id: "comment-button-id-#{post.id}", class: "new-comment-button"%>
-        <% end %>
+          <p class="post-datetime"><%= post.created_at.strftime("%H:%M - %d %b %Y") %></p>
+        </div>  
+
       </div>
+
+      <div>
+        <% post.comments.each do |comment| %>
+          <div class="comment-container">
+            <div class="comment-user">
+              <h4><%= comment.user.username %></h4>
+            </div>
+            <div class="comment-message">
+              <p><%= comment.message %></p>
+              <p class="post-datetime"><%= comment.created_at.strftime("%H:%M - %d %b %Y") %></p>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="new-comment-form">
+          <%= form_tag '/add-comment' do %>
+            <div class="form-section">
+              <%= text_area_tag :comment, params[:comment], id: "comment-post-id-#{post.id}", class: "new-comment-box"%>
+            </div>
+            <%= hidden_field_tag :post_id, post.id %>
+            <%= submit_tag "Add comment", id: "comment-button-id-#{post.id}", class: "new-comment-button"%>
+          <% end %>
+        </div>
+      </div> 
+
+
+
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
