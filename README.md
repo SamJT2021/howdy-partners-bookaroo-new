@@ -4,7 +4,7 @@
 
 Welcome to Bookaroo, the latest and greatest app from Howdy Partners&trade;
 
-This is your go-to place too keep in touch with all your cowboy friends out on the range.
+This is your go-to place to keep in touch with all your cowboy friends out on the range.
 
 Simply sign up for an account and get posting!
 
@@ -14,7 +14,7 @@ The homepage is a simple welcome screen for new users. There is a large call to 
 
 ### Newsfeed
 
-This is the main page for the web app. Here is where signed in users can post new content and write comments on other peoples posts.
+This is the main page for the web app. Here is where logged in users can post new content and write comments on other peoples posts.
 
 ## Sign up
 
