@@ -93,14 +93,13 @@ body {
   border: none;
   border-radius: 4px;
   color: black;
-  padding: 10px 10px;
+  padding: 7px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   transition-duration: 0.2s;
-  width: 80px;
-  height: 60px;
+  margin: 5px;
 }
 
 .button-type-2:hover {
@@ -137,12 +136,20 @@ body {
 }
 
 .navigation-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: orange;
   border-bottom: 5px solid indianred;
-  margin: -10px;
   margin-bottom: 10px;
-  padding: 10px 10px;
+  padding: 0 10px;
   text-align: right;
+}
+
+.nav-user-options {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .page-title {
@@ -162,4 +169,9 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
+}
+
+.current-user {
+  padding: 0 10px;
+  color: #585858;
 }
