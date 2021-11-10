@@ -1,0 +1,25 @@
+language: ruby
+services:
+  - postgresql
+cache:
+  - bundler
+before_install:
+  - nvm install --lts
+  - gem install bundler
+before_script:
+  - bundle install --jobs=3 --retry=3
+  - psql -c 'create database travis_ci_test;' -U postgres
+  - cp config/database.yml.travis config/database.yml
+  - bundle exec rake assets:precompile
+script:
+  - bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: orwOYSb1ueonCCwV9Sqoc2uCJ0QJVGK/IkTpVPaHzDkDXdqB1s68uNbOxoQyG8IHF8zXcSA4q7GzNplooOGEC3uY6oXWICX/Zn4IO1wEtMEIB4TjvPJ8LdT8UfnU+Z6cZRMysVp3m+Rmlmq+Dpt1hMSmHrxN6OmcTabR8DpiqY6Ezy4Ahby8+T09dqr6tJ/apHc7fJ+klZWfzDKeoVZLWl+E4WO0MEpNHLtkackroqk7cZ5NrCvvk/vNSRNweJWcyK8V56ZELJZ9qxjk442wvvXKNZr//HWvXMiSIteL8b4hmlten9kTgUnxDBcAtD6B4fa+Ww7BiswZhLG4/KqJBjFEB2uv4Yrz4pw3Y6160CNzdY9YMWgJQY8ZBGwehwnkQSo2LZm5Vkcexm84XxP+PdsISxZhDqOW02Rd+h20dioojVa6cI0A5lYthBswj3lCNQQMWnJZKVrTE0MZIWUd3NTyQmnzNtLqjwjd1cMVfeS4DmGbFSaGoo/zrcw4Db56xbwvaXuOJLa820xxX8bjqbSmz0ZSAeYUU9zXRQcEjn42UEF3rdHSZLxb5olWi7DCV0D8moEx6K4UmaNxbcQBdEPqCJSCXbGKr7sTpPUoJLoDTeWmNUXzFlNJ9Mn6XnFZNC/jKMuFkQCaszbYnCqCx9giX0DZ8+DlT98N22G40z0=
+  app: howdy-bookaroo
+  on:
+    repo: SamJT2021/howdy-partners-bookaroo-new
+    branch: main
+  skip_cleanup: "true"
+  
