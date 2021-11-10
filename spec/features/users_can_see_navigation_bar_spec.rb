@@ -13,7 +13,7 @@ RSpec.feature "Navigation Bar", type: :feature do
     sign_up_test_user
     Capybara.reset_session!
     log_in_user
-    click_link 'New post'
+    click_button 'New post'
     assert page.has_xpath?("//img[@alt='BOOKAROO logo mule kicking Meta logo' and @src = 'assets/BOOKAROO_logo.jpeg']")
     expect(page).to have_button 'Log out'
   end
