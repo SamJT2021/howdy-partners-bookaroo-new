@@ -139,7 +139,6 @@ body {
 .navigation-bar {
   background-color: orange;
   border-bottom: 5px solid indianred;
-  margin: -10px;
   margin-bottom: 10px;
   padding: 10px 10px;
   text-align: right;
@@ -157,6 +156,14 @@ body {
 }
 
 .profile-picture-on-newsfeed {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.profile-picture-on-navigation-bar {
   width: 50px;
   height: 50px;
   border: 1px solid #ddd;
