@@ -1,5 +1,6 @@
-RSpec.feature "Log out", type: :feature do
+require 'rails_helper'
 
+RSpec.feature "Log out", type: :feature do
   fixtures :users
   scenario "logged in users can log out from newsfeed page" do
     log_in_user

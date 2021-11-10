@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature "Log in", type: :feature do
-  fixtures :users
   scenario "Users can log into their account" do
     log_in_user
     expect(page).to have_current_path("/newsfeed")

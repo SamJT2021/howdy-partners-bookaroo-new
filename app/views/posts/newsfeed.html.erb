@@ -1,24 +1,23 @@
-<div class="navigation-bar">  
-  <h3><img class="profile-picture-on-navigation-bar" src=<%= current_user.profile_picture %> />
-  <%= current_user.username %></h3>
-  <%= button_to "Log out", '/log-out', class: "button-type-2", method: :get%>
-</div>
 
-<h3><%= current_user.username %></h3>
-<div>
-  <%= link_to new_post_path do %>
-    New post
-  <% end %>
+<div class="navigation-bar nav-space-between">
+  <div class="nav-user-options">
+    <img class="profile-picture-on-navigation-bar" src=<%= current_user.profile_picture %> />
+    <h3 class="current-user"><%= current_user.username %></h3>
+  </div>
+  <div class="nav-user-options">
+    <%= button_to "New post", '/posts/new', class: "button-type-2", method: :get%>
+    <%= button_to "Log out", '/log-out', class: "button-type-2", method: :get%>
+  </div>
 </div>
 
 <div class="newsfeed-background">
-  <div class="posts">
-    <% if @posts.empty? %>
-      <h3>There are no posts to display.</h3>
-    <% else %>
-      <% @posts.each_with_index do |post, index| %>
-        <div class="post" id=<%=index%>>
-          <div class="post-container">
+<div class="posts">
+  <% if @posts.empty? %>
+    <h3>There are no posts to display.</h3>
+  <% else %>
+    <% @posts.each_with_index do |post, index| %>
+      <div class="post" id=<%=index%>>
+        <div class="post-container">
 
             <h3><img class="profile-picture-on-newsfeed" src=<%= post.user.profile_picture %> />
             <%= post.user.username %></h3>

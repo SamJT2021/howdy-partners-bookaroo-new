@@ -26,7 +26,7 @@ feature "Viewing posts" do
   scenario "Can see the profile picture of the author of the post" do
     sign_up_test_user
     visit "/newsfeed"
-    expect(page).to have_css('img', "photo-1598974357801-cbca100e65d3.jpeg")
+    expect(page).to have_css('img')
   end
 
 end
