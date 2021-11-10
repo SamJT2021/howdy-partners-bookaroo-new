@@ -6,6 +6,7 @@ RSpec.feature "Navigation Bar", type: :feature do
     log_in_user
     expect(page).to have_content 'BOOKAROO'
     expect(page).to have_button 'Log out'
+    #look in nav bar, or specifically target nav bar profile image
   end
 
   scenario "logged in users can see the nav bar on the new post page" do
