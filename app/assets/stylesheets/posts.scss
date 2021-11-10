@@ -57,3 +57,41 @@
 .post-likes {
   display: flex;
 }
+
+.new-post-field {
+  width: 100%;
+  resize: vertical;
+  min-height: 9rem;
+}
+
+.new-post-container {
+  margin: auto;
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 2px solid brown;
+  box-shadow: 0px 10px 20px black;
+  width: 300px;
+  background-color: rosybrown;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-post-title {
+  margin: 5px 5px 15px 5px;
+}
+
+.new-post-background {
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-image: asset-url("western-noticeboard.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.newsfeed-background {
+  background-image: url("pattern.png");
+}
