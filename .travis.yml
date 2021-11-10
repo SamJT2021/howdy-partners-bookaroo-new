@@ -22,4 +22,6 @@ deploy:
     repo: SamJT2021/howdy-partners-bookaroo-new
     branch: main
   skip_cleanup: "true"
-  
+  run:
+    - "rake db:create"
+    - "rake db:migrate"
