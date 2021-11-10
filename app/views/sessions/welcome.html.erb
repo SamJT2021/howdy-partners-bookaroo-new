@@ -1,5 +1,10 @@
 
+
   <div class="background">
+    <div class="existing-user">
+      <h3 class="has-account-text">Have an account?</h3>
+      <%= button_to "Log in", '/log-in', method: :get, class: "welcome-log-in-button"%>
+    </div>
     <div class="welcome-container">
     <h2 class="sign-up-text">The cowboy's life is the life for me</h2>
     <%= button_to "Sign up", '/sign-up', method: :get, class: "welcome-sign-up-button"%>
