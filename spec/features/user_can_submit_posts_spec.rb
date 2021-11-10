@@ -5,7 +5,7 @@ RSpec.feature "Newsfeed", type: :feature do
     sign_up_test_user
     visit "/newsfeed"
     click_link "New post"
-    fill_in "Message", with: "Hello, world!"
+    fill_in "message", with: "Hello, world!"
     click_button "Submit"
     expect(page).to have_content("Hello, world!")
   end

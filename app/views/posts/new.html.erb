@@ -7,7 +7,7 @@
   <div class="new-post-container">
     <h1 class="new-post-title">New post</h1>
     <%= form_for @post do |form| %>
-      <%= form.text_area :message, class:"new-post-field" %>
+      <%= form.text_area :message, class:"new-post-field", id: "message" %>
 
       <%= form.submit "Submit", class:"button-type-4"%>
     <% end %>
