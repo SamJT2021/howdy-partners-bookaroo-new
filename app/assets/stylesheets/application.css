@@ -138,12 +138,16 @@ body {
 .navigation-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   background-color: orange;
   border-bottom: 5px solid indianred;
   margin-bottom: 10px;
   padding: 0 10px;
   text-align: right;
+}
+
+.nav-space-between {
+  justify-content: space-between;
 }
 
 .nav-user-options {
@@ -173,5 +177,13 @@ body {
 
 .current-user {
   padding: 0 10px;
-  color: #585858;
+  color: #222222;
+}
+
+.profile-picture-on-navigation-bar {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
 }
