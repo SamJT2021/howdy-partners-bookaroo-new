@@ -4,7 +4,7 @@ RSpec.describe PostsController, type: :controller do
   describe "GET /new " do
     context 'user is logged in' do
       it "responds with 200" do
-        controller.stub(:authorized)
+        expect(controller).to receive(:authorized)
         get :new
         expect(response).to have_http_status(200)
       end
@@ -21,7 +21,7 @@ RSpec.describe PostsController, type: :controller do
   describe "POST /" do
 
     before(:each) do
-      controller.stub(:authorized)
+      expect(controller).to receive(:authorized)
     end
 
     it "responds with 200" do
@@ -34,7 +34,7 @@ RSpec.describe PostsController, type: :controller do
   describe "GET /newsfeed" do
     context 'user is logged in' do
       it "responds with 200" do
-        controller.stub(:authorized)
+        expect(controller).to receive(:authorized)
         get :newsfeed
         expect(response).to have_http_status(200)
       end
