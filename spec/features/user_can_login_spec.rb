@@ -14,6 +14,7 @@ RSpec.feature "Log in", type: :feature do
     fill_in "password", with: "wrong"
     click_button "Log in"
     expect(page).to have_current_path("/log-in")
+    expect(page).to have_content("Invalid credentials")
   end
 
 end

@@ -28,7 +28,6 @@ body {
   border-bottom: 3px solid black;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
   "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 0px 10px 10px 10px;
   text-align: center;
 }
 
@@ -216,4 +215,22 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
+}
+
+.sign-up-input {
+  width: 96%;
+  margin-bottom:5px;
+}
+
+.profile-picture-input {
+  resize: vertical;
+  height: 3rem;
+}
+
+.logo-icon {
+  width: 75px;
+  background-color: goldenrod;
+  border-radius: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
 }

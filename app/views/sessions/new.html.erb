@@ -1,19 +1,21 @@
 <%= render "shared/navigation_bar_logged_out_log_in_page" %>
 
-<div class="credentials-container">
-  <h1>Log in</h1>
-    <%= form_tag '/log-in' do %>
-    <% if @error %>
-    <div class="error-message"><%= @error %></div>
-    <% end %>
-    <div class="form-section">
-      <div><%= label_tag :username%></div>
-      <%= text_field_tag :username %>
-    </div>
-    <div class="form-section">
-      <div><%= label_tag :password%></div>
-      <%= password_field_tag :password%>
-    </div>
-    <%= submit_tag "Log in", class: "button-type-3" %>
-  <%end%>
+  <div class="credentials-container">
+    <%= image_tag "icon.png", class:"logo-icon"%>
+    <h1>Log in</h1>
+      <%= form_tag '/log-in' do %>
+      <% if @error %>
+      <div class="error-message"><%= @error %></div>
+      <% end %>
+      <div class="form-section">
+        <div><%= label_tag :username%></div>
+        <%= text_field_tag :username %>
+      </div>
+      <div class="form-section">
+        <div><%= label_tag :password%></div>
+        <%= password_field_tag :password%>
+      </div>
+      <%= submit_tag "Log in", class: "button-type-3" %>
+    <%end%>
+  </div>
 </div>

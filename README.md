@@ -1,5 +1,9 @@
 # Bookaroo
 
+Access the live site here: [Bookaroo](https://howdy-bookaroo.herokuapp.com/newsfeed)
+
+![branch-status](https://app.travis-ci.com/SamJT2021/howdy-partners-bookaroo-new.svg?branch=main)
+
 ## Intro
 
 Welcome to Bookaroo, the latest and greatest app from Howdy Partners&trade;
@@ -53,3 +57,7 @@ bin/rails server
 ```
 
 add `-p <port>` to specify a port. The default is 3000
+
+## CD/CI and production build
+
+The Howdy Partners app is set up with a CD/CI build pipeline. This integrates a Travis CI srcipt that will run the full test suite on each branch and pull request ensuring all code is suitable to be merged into the Main branch. When a PR is merged into main a final suite of testing is done before the application is automatically deployed to the production Heroku build. Allowing for fully automated continuous integration.
