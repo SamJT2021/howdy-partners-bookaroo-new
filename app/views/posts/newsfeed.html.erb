@@ -19,7 +19,10 @@
                 <div class="new-like-form">
                   <%= form_tag '/add-like' do %>
                     <%= hidden_field_tag :post_id, post.id %>
-                    <%= submit_tag "Like", id: "like-button-id-#{post.id}", class: "new-like-button"%>
+                    <div class="tooltip-bottom">
+                      <%= submit_tag "Like", id: "like-button-id-#{post.id}", class: "new-like-button"%>
+                      <span class="tooltiptext">Thank you kindly.</span>
+                     </div>
                   <% end %>
                 </div>
                 <p id="like-count-id-<%= post.id %>" >Likes: <%= post.number_of_likes %></p>
@@ -48,13 +51,13 @@
                   <%= text_area_tag :comment, params[:comment], id: "comment-post-id-#{post.id}", class: "new-comment-box"%>
                 </div>
                 <%= hidden_field_tag :post_id, post.id %>
-                <%= submit_tag "Add comment", id: "comment-button-id-#{post.id}", class: "new-comment-button"%>
+                <div class="tooltip-bottom">
+                  <%= submit_tag "Add comment", id: "comment-button-id-#{post.id}", class: "new-comment-button"%>
+                  <span class="tooltiptext">Got somethin' to say?</span>
+                </div>
               <% end %>
             </div>
           </div> 
-
-
-
         </div>
       <% end %>
     <% end %>
