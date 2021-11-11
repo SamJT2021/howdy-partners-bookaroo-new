@@ -1,16 +1,16 @@
-
-<div class="navigation-bar nav-space-between">
-  <div class="nav-user-options">
-    <img class="profile-picture-on-navigation-bar" src=<%= current_user.profile_picture %> />
-    <h3 class="current-user"><%= current_user.username %></h3>
-  </div>
-  <div class="nav-user-options">
-    <%= button_to "New post", '/posts/new', class: "button-type-2", method: :get%>
-    <%= button_to "Log out", '/log-out', class: "button-type-2", method: :get%>
-  </div>
-</div>
-
 <div class="newsfeed-background">
+  <div class="navigation-bar nav-space-between">
+    <div class="nav-user-options">
+      <img class="profile-picture-on-navigation-bar" src=<%= current_user.profile_picture %> />
+      <h3 class="current-user"><%= current_user.username %></h3>
+    </div>
+    <div class="nav-user-options">
+      <%= button_to "New post", '/posts/new', class: "button-type-2", method: :get%>
+      <%= button_to "Log out", '/log-out', class: "button-type-2", method: :get%>
+    </div>
+  </div>
+
+
 <div class="posts">
   <% if @posts.empty? %>
     <h3>There are no posts to display.</h3>

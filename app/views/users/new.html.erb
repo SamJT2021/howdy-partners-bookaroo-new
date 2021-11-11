@@ -1,9 +1,9 @@
-
-<div class="navigation-bar">
-  <%= button_to "Log in", '/log-in', class: "button-type-2", method: :get%>
-</div>
-
 <div class="sign-up-background">
+  <div class="navigation-bar">
+    <%= button_to "Log in", '/log-in', class: "button-type-2", method: :get%>
+  </div>
+
+
   <div class="credentials-container">
     <h1>Sign up</h1>
     <%= form_for @user do |f|%>
