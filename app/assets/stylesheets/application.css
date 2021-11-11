@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 html {
   height: 100%;
 }
@@ -20,6 +21,14 @@ html {
 body {
   height: 100%;
   margin: auto;
+}
+
+.page-header {
+  background-color: goldenrod;
+  border-bottom: 5px solid indianred;
+  padding: 10px 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .error-message {
@@ -148,13 +157,7 @@ body {
 }
 
 
-.header {
-  background-color: goldenrod;
-  border-bottom: 5px solid indianred;
-  padding: 10px 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+
 
 .navigation-bar {
   display: flex;
