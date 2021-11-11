@@ -7,12 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('icon.png')%>
   </head>
 
   <body>
     <div class="header">
       <div class="page-title">
-      <img src= "assets/BOOKAROO_logo.jpeg" alt="BOOKAROO logo mule kicking Meta logo" style="width:40%;">
+      <%= image_tag "BOOKAROO_logo.png"%>
       </div>
     </div>
 
