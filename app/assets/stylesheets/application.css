@@ -209,6 +209,16 @@ body {
   padding: 5px;
 }
 
+.sign-up-input {
+  width: 96%;
+  margin-bottom:5px;
+}
+
+.profile-picture-input {
+  resize: vertical;
+  height: 3rem;
+}
+
 .logo-icon {
   width: 75px;
   background-color: goldenrod;
