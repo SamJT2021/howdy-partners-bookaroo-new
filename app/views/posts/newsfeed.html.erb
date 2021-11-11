@@ -30,22 +30,35 @@
           </div>
 
           <div>
-            <% post.comments.each do |comment| %>
+            <% post.comments.order(created_at: :desc).each do |comment| %>
               <div class="comment-container">
                 <div class="comment-user">
                   <h4><%= comment.user.username %></h4>
                 </div>
                 <div class="comment-message">
                   <p><%= comment.message %></p>
-                  <p class="post-datetime"><%= comment.created_at.strftime("%H:%M - %d %b %Y") %></p>
+
+                <div class="comment-information">
+                    <div class="comment-likes">
+                      <div class="new-like-form">
+                        <%= form_tag '/add-like-to-comment' do %>
+                          <%= hidden_field_tag :post_id, comment.id %>
+                          <%= submit_tag "Like", id: "comment-like-button-id-#{comment.id}", class: "new-like-button"%>
+                        <% end %>
+                      </div>
+                      <p id="comment-like-count-id-<%= comment.id %>" >Likes: <%= comment.number_of_likes %></p>
+                    </div>
+                    <p class="post-datetime"><%= comment.created_at.strftime("%H:%M - %d %b %Y") %></p>
+                  </div> 
                 </div>
               </div>
             <% end %>
+          
 
             <div class="new-comment-form">
               <%= form_tag '/add-comment' do %>
                 <div class="form-section">
-                  <%= text_area_tag :comment, params[:comment], id: "comment-post-id-#{post.id}", class: "new-comment-box"%>
+                  <%= text_area_tag :comment, params[:comment], id: "comment-post-id-#{post.id}", class: "new-comment-box", required: true %>
                 </div>
                 <%= hidden_field_tag :post_id, post.id %>
                 <%= submit_tag "Add comment", id: "comment-button-id-#{post.id}", class: "new-comment-button"%>

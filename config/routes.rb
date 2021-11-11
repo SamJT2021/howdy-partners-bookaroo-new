@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get 'newsfeed', to: 'posts#newsfeed'
   post 'add-comment', to: 'posts#add_comment'
   post 'add-like', to: 'posts#add_like'
+  post 'add-like-to-comment', to: 'posts#add_like_to_comment'
   root "sessions#welcome"
 end

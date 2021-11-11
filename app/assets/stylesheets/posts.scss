@@ -58,6 +58,15 @@
   display: flex;
 }
 
+.comment-information {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-likes {
+  display: flex;
+}
+
 .new-post-field {
   width: 100%;
   resize: vertical;
