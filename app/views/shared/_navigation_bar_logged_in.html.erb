@@ -1,10 +1,8 @@
-<%# From the newsfeed page %>
-
 <div class="navigation-bar nav-space-between">
 
   <div class="nav-user-options">
     <img class="profile-picture-on-navigation-bar" src=<%= current_user.profile_picture %> />
-    <h3 class="current-user"><%= current_user.username %></h3>
+    <h3 class="current-user">Howdy <%= current_user.username %>!</h3>
   </div>
 
   <div class="nav-user-options">
