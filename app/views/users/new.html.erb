@@ -5,6 +5,7 @@
 
 
   <div class="credentials-container">
+   <%= image_tag "icon.png", class:"logo-icon"%>
     <h1>Sign up</h1>
     <%= form_for @user do |f|%>
     <div class="form-section" id="form-username">
@@ -28,5 +29,6 @@
     
     <%= f.submit 'Sign up', class: "button-type-3"%>
     <%end%>
+
   </div>
 </div>
