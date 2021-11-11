@@ -218,3 +218,11 @@ body {
   resize: vertical;
   height: 3rem;
 }
+
+.logo-icon {
+  width: 75px;
+  background-color: goldenrod;
+  border-radius: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
