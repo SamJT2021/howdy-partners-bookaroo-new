@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Bookaroo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag asset_path('icon.png')%>
   </head>
 
   <body>
-    <div class="header">
-      <div class="page-title">
-      <%= image_tag "BOOKAROO_logo.png", id:"header-image"%>
-      </div>
-    </div>
-
+    <%= render "shared/page_header" %>
     <%= yield %>
   </body>
+
 </html>

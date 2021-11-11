@@ -1,8 +1,6 @@
 <div class="sign-up-background">
-  <div class="navigation-bar">
-    <%= button_to "Log in", '/log-in', class: "button-type-2", method: :get%>
-  </div>
 
+<%= render "shared/navigation_bar_logged_out_sign_up_page" %>
 
   <div class="credentials-container">
     <%= image_tag "icon.png", class:"logo-icon"%>
