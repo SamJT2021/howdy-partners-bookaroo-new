@@ -27,6 +27,18 @@ def sign_up_test_user
   click_button "Sign up"
 end
 
+def sign_up_test_user_without_profile_picture
+  @test_user = "feature_test_user"
+  @test_password = "feature_test_user"
+  visit "/"
+  click_button "Sign up"
+  expect(page).to have_current_path("/sign-up")
+  fill_in "user_username", with: @test_user
+  fill_in "user_password", with: @test_password
+  fill_in "user_profile_picture", with: @test_profile_picture
+  click_button "Sign up"
+end
+
 def log_in_user
   visit('/')
   click_button 'Log in'

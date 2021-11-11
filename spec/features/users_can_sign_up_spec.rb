@@ -22,4 +22,9 @@ RSpec.feature "Sign up", type: :feature do
     expect(page).to have_content("Profile picture")
   end
 
+  scenario "users who do not enter a profile picture are assigned a default image" do
+    sign_up_test_user_without_profile_picture
+    expect(page).to have_css("img[src*='https://lh3.googleusercontent.com/proxy/o4g3witOQP5IKgMnR271nEd2NwM-CetBeNdsl5z_Mozw-wrAXi30uBNL4-ckj4dFNA5Z_BsZ6fLDMVa0AZBg_xhw9A']")
+  end
+
 end
