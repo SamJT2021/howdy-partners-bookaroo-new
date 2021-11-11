@@ -33,7 +33,8 @@
             <% post.comments.each do |comment| %>
               <div class="comment-container">
                 <div class="comment-user">
-                  <h4><%= comment.user.username %></h4>
+                  <h4><img class="profile-picture-on-newsfeed" src=<%= comment.user.profile_picture %> />
+                  <%= comment.user.username %></h4>
                 </div>
                 <div class="comment-message">
                   <p><%= comment.message %></p>
