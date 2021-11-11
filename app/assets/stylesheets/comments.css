@@ -31,6 +31,7 @@
   font-size: 12px;
   transition-duration: 0.2s;
   margin-top: 10px;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .new-comment-button:hover {

@@ -2,20 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.credentials-container {
+  margin: auto;
+  padding: 40px;
+  border-radius: 5px;
+  border: 2px solid brown;
+  box-shadow: 0px 10px 20px black;
+  width: 300px;
+  background-color: rosybrown;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  margin: 2px auto;
+  text-transform: capitalize;
+  width: 90%;
+  background-color: red;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .log-in-background {
     height: 100%;
     width: 100%;
     background-size: 100%;
     background-image: asset-url("pattern");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
- .sign-up-background {
-    height: 100%;
-    width: 100%;
-    background-size: 100%;
-    background-image: asset-url("pattern.png");
     background-position: center;
     background-repeat: no-repeat;
   }
