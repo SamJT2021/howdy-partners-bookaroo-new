@@ -23,6 +23,12 @@ class PostsController < ApplicationController
     redirect_to newsfeed_url
   end
 
+  def add_like_to_comment
+    comment = Comment.find(params[:post_id])
+    comment.update_attribute(:number_of_likes, comment.number_of_likes + 1)
+    redirect_to newsfeed_url
+  end
+
   private
 
   def post_params
