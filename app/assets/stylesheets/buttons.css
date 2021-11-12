@@ -1,0 +1,108 @@
+.button {
+  background-color: #cbeff5; /* Blue */
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  width: 120px;
+  height: 60px;
+  box-shadow: 5px 5px 5px black;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button:hover {
+  background-color: #24d5f2;
+  color: white;
+}
+
+.button-type-1 {
+  background-color: #cbeff5; /* Blue */
+  border: none;
+  border-radius: 64px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 42px;
+  transition-duration: 0.2s;
+  width: 300px;
+  height: 100px;
+  box-shadow: 5px 5px 5px black;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-type-1:hover {
+  background-color: #24d5f2;
+  color: white;
+}
+
+.button-type-2 {
+  background-color: #e7e7e7; /* Gray */
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  margin: 5px;
+  box-shadow: 5px 5px 5px black;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-type-2:hover {
+  background-color: #9b9e9c;
+  color: white;
+}
+
+.button-type-3 {
+  background-color: #e7e7e7; /* Gray */
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  width: 100%;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px black;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-type-3:hover {
+  background-color: #9b9e9c;
+  color: white;
+}
+
+.button-type-4 {
+  background-color: #e7e7e7; /* Gray */
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.2s;
+  width: 102%;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px black;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-type-4:hover {
+  background-color: #9b9e9c;
+  color: white;
+}

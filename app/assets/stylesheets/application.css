@@ -21,14 +21,30 @@ html {
 body {
   height: 100%;
   margin: auto;
+  font-family: Rockwell, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .page-header {
   background-color: goldenrod;
   border-bottom: 3px solid black;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
+}
+
+.page-header-image {
+  padding: 0px 100px 0px 0px;
+}
+
+.current-user {
+  padding: 0 10px;
+  color: #222222;
+}
+
+.logo-icon {
+  width: 75px;
+  background-color: goldenrod;
+  border-radius: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
 }
 
 .navigation-bar {
@@ -52,185 +68,26 @@ body {
   align-items: center;
 }
 
-
-
-/* .page-title {
-  margin: 0;
-  padding: 10px;
-
-} */
-
-.error-message {
-  margin: 2px auto;
-  text-transform: capitalize;
-  width: 90%;
-  background-color: red;
-  padding: 2px;
-  border: 2px solid black;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.credentials-container {
-  margin: auto;
-  padding: 40px;
-  border-radius: 5px;
-  border: 2px solid brown;
-  box-shadow: 0px 10px 20px black;
-  width: 300px;
-  background-color: rosybrown;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.button {
-  background-color: #cbeff5; /* Blue */
-  border: none;
-  border-radius: 4px;
-  color: black;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  width: 120px;
-  height: 60px;
-}
-
-.button:hover {
-  background-color: #24d5f2;
-  color: white;
-}
-
-.button-type-1 {
-  background-color: #cbeff5; /* Blue */
-  border: none;
-  border-radius: 64px;
-  color: black;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 42px;
-  transition-duration: 0.2s;
-  width: 300px;
-  height: 100px;
-}
-
-.button-type-1:hover {
-  background-color: #24d5f2;
-  color: white;
-}
-
-.button-type-2 {
-  background-color: #e7e7e7; /* Gray */
-  border: none;
-  border-radius: 4px;
-  color: black;
-  padding: 7px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  margin: 5px;
-}
-
-.button-type-2:hover {
-  background-color: #9b9e9c;
-  color: white;
-}
-
-.button-type-3 {
-  background-color: #e7e7e7; /* Gray */
-  border: none;
-  border-radius: 4px;
-  color: black;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.button-type-3:hover {
-  background-color: #9b9e9c;
-  color: white;
-}
-
-.button-type-4 {
-  background-color: #e7e7e7; /* Gray */
-  border: none;
-  border-radius: 4px;
-  color: black;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition-duration: 0.2s;
-  width: 102%;
-  margin-top: 10px;
-}
-
-.button-type-4:hover {
-  background-color: #9b9e9c;
-  color: white;
-}
-
-
-
-
-
-
-
-.ruled-line {
-  border: 5px solid indianred;
-  border-radius: 5px;
-}
-
-.profile-picture-on-newsfeed {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-}
-
-.current-user {
-  padding: 0 10px;
-  color: #222222;
-}
-
 .profile-picture-on-navigation-bar {
   width: 50px;
   height: 50px;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-}
-
-.sign-up-input {
-  width: 96%;
-  margin-bottom:5px;
-}
-
-.profile-picture-input {
-  resize: vertical;
-  height: 3rem;
-}
-
-.logo-icon {
-  width: 75px;
   background-color: goldenrod;
-  border-radius: 25px;
+}
+
+.page-footer {
+  background-color: goldenrod;
+  border-bottom: 3px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.page-footer-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
   padding: 5px;
-  border: 1px solid #ccc;
 }
