@@ -23,5 +23,4 @@ deploy:
     branch: main
   skip_cleanup: "true"
   run:
-    - "rake db:create"
     - "rake db:migrate"
