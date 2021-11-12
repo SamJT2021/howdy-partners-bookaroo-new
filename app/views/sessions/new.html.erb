@@ -11,11 +11,11 @@
         <% end %>
         <div class="form-section">
           <div><%= label_tag :username%></div>
-          <%= text_field_tag :username %>
+          <%= text_field_tag :username, params[:username], class:"sign-up-input" %>
         </div>
         <div class="form-section">
           <div><%= label_tag :password%></div>
-          <%= password_field_tag :password%>
+          <%= password_field_tag :password, params[:password], class:"sign-up-input" %>
         </div>
         <%= submit_tag "Log in", class: "button-type-3" %>
       <%end%>

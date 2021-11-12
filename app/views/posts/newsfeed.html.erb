@@ -33,7 +33,7 @@
           </div>
 
           <div>
-            <% post.comments.order(created_at: :desc).each do |comment| %>
+            <% post.comments.order(created_at: :asc).each do |comment| %>
               <div class="comment-container">
                 <div class="comment-user">
                   <h4><img class="profile-picture-on-newsfeed" src=<%= comment.user.profile_picture %> />
